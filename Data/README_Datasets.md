@@ -15,7 +15,7 @@ In Terminal: export PYTHONPATH=$PYTHONPATH:'/path_to/3W/toolkit'
 
 4. Change the file path in the below code to the path specified in the comment
 
-5. Run the python file '3W_Data_Extraction.py' in the terminal
+5. Run the python file '3W_Data_Extraction.py' in the terminal or the through the notebook '3W_Data_Extraction.ipynb'
 
 
 # To download extracted datasets:
