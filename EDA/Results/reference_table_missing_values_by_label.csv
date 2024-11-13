@@ -1,0 +1,36 @@
+Tag,Name,Unit,Value Type,Unique Values (Real),Missing Values (%) (Real),Missing Values (%) (Label 1),Missing Values (%) (Label 2),Missing Values (%) (Label 3),Missing Values (%) (Label 4),Missing Values (%) (Label 5),Missing Values (%) (Label 6),Missing Values (%) (Label 7),Missing Values (%) (Label 8),Missing Values (%) (Label 9)
+ABER-CKGL,Opening of the GLCK (gas lift choke),%,Continuous,300484,74.2,100.0,100.0,3.4,67.4,86.3,75.7,60.5,93.6,34.9
+ABER-CKP,Opening of the PCK (production choke),%,Continuous,850210,62.5,100.0,92.4,3.4,67.4,86.3,75.7,60.5,17.2,34.9
+ESTADO-DHSV,State of the DHSV (downhole safety valve),"[0, 0.5, 1]",Categorical,2,57.8,7.6,96.3,96.8,62.9,0.3,75.7,56.4,52.2,92.0
+ESTADO-M1,State of the PMV (production master valve),"[0, 0.5, 1]",Categorical,2,45.9,7.6,96.3,96.8,62.9,0.3,75.7,56.4,2.7,39.6
+ESTADO-PXO,State of the PXO (pig-crossover) valve,"[0, 0.5, 1]",Categorical,2,44.7,7.6,67.1,96.8,62.9,0.3,75.7,56.4,7.5,39.6
+ESTADO-M2,State of the AMV (annulus master valve),"[0, 0.5, 1]",Categorical,3,46.2,7.6,83.7,96.8,62.9,0.3,75.7,56.4,5.2,39.6
+ESTADO-SDV-GL,State of the gas lift SDV (shutdown valve),"[0, 0.5, 1]",Categorical,2,48.0,7.6,91.4,0.3,56.2,0.3,100.0,60.1,7.6,26.1
+ESTADO-SDV-P,State of the production SDV (shutdown valve),"[0, 0.5, 1]",Categorical,2,26.0,7.6,74.2,0.3,39.9,2.0,75.7,0.0,7.6,26.1
+ESTADO-W1,State of the PWV (production wing valve),"[0, 0.5, 1]",Categorical,2,42.4,7.6,88.7,0.2,56.8,0.3,75.7,56.4,0.0,34.6
+ESTADO-W2,State of the AWV (annulus wing valve),"[0, 0.5, 1]",Categorical,3,44.3,7.6,67.1,96.8,62.9,0.3,75.7,56.4,5.1,39.6
+P-ANULAR,Pressure in the well annulus,Pa,Continuous,1496311,22.5,0.0,5.7,0.2,27.1,0.3,0.0,21.8,44.9,43.1
+ESTADO-XO,State of the XO (crossover) valve,"[0, 0.5, 1]",Categorical,2,43.6,7.6,67.1,96.8,62.9,0.3,75.7,56.4,0.0,39.6
+P-JUS-BS,Downstream pressure of the SP (service pump),Pa,Empty,0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+P-JUS-CKGL,Downstream pressure of the GLCK (gas lift choke),Pa,Continuous,2868202,23.8,7.6,91.4,0.3,45.2,0.3,100.0,0.0,15.0,0.0
+P-MON-SDV-P,Upstream pressure of the production SDV (shutdown valve),Pa,Empty,0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+P-MON-CKP,Upstream pressure of the PCK (production choke),Pa,Continuous,3479501,21.5,7.6,67.2,0.3,32.6,0.3,75.7,0.0,0.0,0.0
+P-JUS-CKP,Downstream pressure of the PCK (production choke),Pa,Continuous,351370,89.5,100.0,100.0,100.0,100.0,100.0,100.0,100.0,31.3,100.0
+P-MON-CKGL,Upstream pressure of the GLCK (gas lift choke),Pa,Continuous,92596,99.1,100.0,100.0,100.0,100.0,100.0,100.0,100.0,93.6,100.0
+P-PDG,Pressure at the PDG (permanent downhole gauge),Pa,Continuous,1077171,24.1,0.0,4.8,0.2,35.2,0.3,0.0,27.2,21.7,35.1
+PT-P,Downstream pressure of the PWV in the production tube,Pa,Empty,0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+P-TPT,Pressure at the TPT (temperature and pressure transducer),Pa,Continuous,1782324,16.4,0.0,5.7,0.2,24.2,0.3,0.0,19.9,27.0,15.0
+QBS,Flow rate at the SP (service pump),m3/s,Empty,0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+QGL,Gas lift flow rate,m3/s,Continuous,2310417,46.1,7.6,67.9,0.2,80.4,0.3,100.0,59.3,0.0,8.5
+T-JUS-CKP,Downstream temperature of the PCK (production choke),°C,Continuous,3080444,48.8,7.6,96.3,0.2,56.8,0.3,75.7,19.9,100.0,34.6
+T-MON-CKP,Upstream temperature of the PCK (production choke),°C,Continuous,1980654,84.9,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,100.0
+T-PDG,Temperature at the PDG (permanent downhole gauge),°C,Continuous,861293,36.7,7.6,22.0,0.2,43.7,0.3,75.7,14.5,21.7,26.1
+class,Label of the observation,Label,Classifier,17,12.3,6.1,28.6,16.8,33.5,9.0,27.9,1.6,1.0,7.8
+T-TPT,Temperature at the TPT (temperature and pressure transducer),°C,Continuous,1376954,13.6,0.0,0.8,0.2,0.0,0.3,0.0,7.1,41.3,26.1
+label,Instance label (event type),Instance Label,Classifier,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+state,Well operational status,Operational Status,Classifier,9,12.3,6.1,28.6,16.8,33.5,9.0,27.9,1.6,1.0,7.8
+well,Well name,Well Name,Identifier,40,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+id,Instance identifier,Instance ID,Identifier,1113,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Instance,Instance count based on manual labeling,Instance ID (Manual),Identifier,1119,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+DataType,"Real , simulated or hand-drawn",Dataset Type,Categorical,1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+timestamp,Timestamp,Timestamp,Timestamp,24910943,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

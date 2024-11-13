@@ -1,0 +1,36 @@
+Tag,Name,Unit,Value Type,Unique Values (Real),Missing Values (%) (Real)
+ABER-CKGL,Opening of the GLCK (gas lift choke),%,Continuous,300484,74.2
+ABER-CKP,Opening of the PCK (production choke),%,Continuous,850210,62.5
+ESTADO-DHSV,State of the DHSV (downhole safety valve),"[0, 0.5, 1]",Categorical,2,57.8
+ESTADO-M1,State of the PMV (production master valve),"[0, 0.5, 1]",Categorical,2,45.9
+ESTADO-PXO,State of the PXO (pig-crossover) valve,"[0, 0.5, 1]",Categorical,2,44.7
+ESTADO-M2,State of the AMV (annulus master valve),"[0, 0.5, 1]",Categorical,3,46.2
+ESTADO-SDV-GL,State of the gas lift SDV (shutdown valve),"[0, 0.5, 1]",Categorical,2,48.0
+ESTADO-SDV-P,State of the production SDV (shutdown valve),"[0, 0.5, 1]",Categorical,2,26.0
+ESTADO-W1,State of the PWV (production wing valve),"[0, 0.5, 1]",Categorical,2,42.4
+ESTADO-W2,State of the AWV (annulus wing valve),"[0, 0.5, 1]",Categorical,3,44.3
+P-ANULAR,Pressure in the well annulus,Pa,Continuous,1496311,22.5
+ESTADO-XO,State of the XO (crossover) valve,"[0, 0.5, 1]",Categorical,2,43.6
+P-JUS-BS,Downstream pressure of the SP (service pump),Pa,Empty,0,100.0
+P-JUS-CKGL,Downstream pressure of the GLCK (gas lift choke),Pa,Continuous,2868202,23.8
+P-MON-SDV-P,Upstream pressure of the production SDV (shutdown valve),Pa,Empty,0,100.0
+P-MON-CKP,Upstream pressure of the PCK (production choke),Pa,Continuous,3479501,21.5
+P-JUS-CKP,Downstream pressure of the PCK (production choke),Pa,Continuous,351370,89.5
+P-MON-CKGL,Upstream pressure of the GLCK (gas lift choke),Pa,Continuous,92596,99.1
+P-PDG,Pressure at the PDG (permanent downhole gauge),Pa,Continuous,1077171,24.1
+PT-P,Downstream pressure of the PWV in the production tube,Pa,Empty,0,100.0
+P-TPT,Pressure at the TPT (temperature and pressure transducer),Pa,Continuous,1782324,16.4
+QBS,Flow rate at the SP (service pump),m3/s,Empty,0,100.0
+QGL,Gas lift flow rate,m3/s,Continuous,2310417,46.1
+T-JUS-CKP,Downstream temperature of the PCK (production choke),°C,Continuous,3080444,48.8
+T-MON-CKP,Upstream temperature of the PCK (production choke),°C,Continuous,1980654,84.9
+T-PDG,Temperature at the PDG (permanent downhole gauge),°C,Continuous,861293,36.7
+class,Label of the observation,Label,Classifier,17,12.3
+T-TPT,Temperature at the TPT (temperature and pressure transducer),°C,Continuous,1376954,13.6
+label,Instance label (event type),Instance Label,Classifier,10,0.0
+state,Well operational status,Operational Status,Classifier,9,12.3
+well,Well name,Well Name,Identifier,40,0.0
+id,Instance identifier,Instance ID,Identifier,1113,0.0
+Instance,Instance count based on manual labeling,Instance ID (Manual),Identifier,1119,0.0
+DataType,"Real , simulated or hand-drawn",Dataset Type,Categorical,1,0.0
+timestamp,Timestamp,Timestamp,Timestamp,24910943,0.0
