@@ -24,8 +24,10 @@ In Terminal: export PYTHONPATH=$PYTHONPATH:'/path_to/3W/toolkit'
 
 2. Navigate to 'Resourcse/3W Datasets'
 
-3. Download zip file '3W_Datasets'
+3. Download zip file 'real_instances.parquet.zip' (Required) and '3W_Datasets_Seperated.zip' (Optional)
 
-4. Extract the 3 datasets from the zip file 
+4. Extract the datasets from the zip files 
 
 5. Save the datasets in the directory where the 'CapStone' repository is located inside the 'Data' subfolder
+
+6. Only the 'real_instances.parquet.zip' is needed for the project. 
