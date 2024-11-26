@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE PROJECT/Git/CapStone/ML/mlruns/724568823733986683/db486e49b8654050ae98673c73a9090e/artifacts
+end_time: 1732638452517
+entry_point_name: ''
+experiment_id: '724568823733986683'
+lifecycle_stage: active
+run_id: db486e49b8654050ae98673c73a9090e
+run_name: GBT_Label_3
+run_uuid: db486e49b8654050ae98673c73a9090e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732638407897
+status: 3
+tags: []
+user_id: ghazijalal
