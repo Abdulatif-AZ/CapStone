@@ -1,7 +1,0 @@
-artifact_location: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE
-  PROJECT/Git/CapStone/ML/mlruns/724568823733986683
-creation_time: 1732638177060
-experiment_id: '724568823733986683'
-last_update_time: 1732638177060
-lifecycle_stage: active
-name: MLlib_GBTClassifier
