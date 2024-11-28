@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE PROJECT/Git/CapStone/ML/mlruns/742828818109917580/9f9888fcda8541bcb02dc441e953ac87/artifacts
+deleted_time: 1732717078532
+end_time: 1732716723193
+entry_point_name: ''
+experiment_id: '742828818109917580'
+lifecycle_stage: deleted
+run_id: 9f9888fcda8541bcb02dc441e953ac87
+run_name: Naive_Bayes_Classifier
+run_uuid: 9f9888fcda8541bcb02dc441e953ac87
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732716722670
+status: 4
+tags: []
+user_id: ghazijalal
