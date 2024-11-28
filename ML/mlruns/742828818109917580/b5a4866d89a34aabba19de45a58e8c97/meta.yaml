@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE PROJECT/Git/CapStone/ML/mlruns/742828818109917580/b5a4866d89a34aabba19de45a58e8c97/artifacts
+deleted_time: 1732714600340
+end_time: 1732708353249
+entry_point_name: ''
+experiment_id: '742828818109917580'
+lifecycle_stage: deleted
+run_id: b5a4866d89a34aabba19de45a58e8c97
+run_name: Random_Forest_Classifier
+run_uuid: b5a4866d89a34aabba19de45a58e8c97
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732707879305
+status: 3
+tags: []
+user_id: ghazijalal
