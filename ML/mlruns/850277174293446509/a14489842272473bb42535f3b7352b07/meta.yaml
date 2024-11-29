@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE PROJECT/Git/CapStone/ML/mlruns/850277174293446509/a14489842272473bb42535f3b7352b07/artifacts
+end_time: 1732869881562
+entry_point_name: ''
+experiment_id: '850277174293446509'
+lifecycle_stage: active
+run_id: a14489842272473bb42535f3b7352b07
+run_name: Layer_2_MultiClassification_RandomForest
+run_uuid: a14489842272473bb42535f3b7352b07
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732867147638
+status: 3
+tags: []
+user_id: ghazijalal
