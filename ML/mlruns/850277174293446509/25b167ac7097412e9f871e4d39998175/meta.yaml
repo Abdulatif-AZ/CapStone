@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE PROJECT/Git/CapStone/ML/mlruns/850277174293446509/25b167ac7097412e9f871e4d39998175/artifacts
+deleted_time: 1732894149043
+end_time: 1732886594496
+entry_point_name: ''
+experiment_id: '850277174293446509'
+lifecycle_stage: deleted
+run_id: 25b167ac7097412e9f871e4d39998175
+run_name: Layer_2_Evaluation_RandomForest
+run_uuid: 25b167ac7097412e9f871e4d39998175
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732886594479
+status: 4
+tags: []
+user_id: ghazijalal
