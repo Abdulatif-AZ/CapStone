@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE PROJECT/Git/CapStone/ML/mlruns/850277174293446509/f099425362d94fa39a9c5835c9f87c5b/artifacts
+end_time: 1732879992363
+entry_point_name: ''
+experiment_id: '850277174293446509'
+lifecycle_stage: active
+run_id: f099425362d94fa39a9c5835c9f87c5b
+run_name: Layer_2_MultiClassification_Multilayer_Perceptron_Classifier
+run_uuid: f099425362d94fa39a9c5835c9f87c5b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732869883422
+status: 3
+tags: []
+user_id: ghazijalal
