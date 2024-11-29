@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ghazijalal/Documents/IE University/Term 3/CAPSTONE PROJECT/Git/CapStone/ML/mlruns/850277174293446509/beb4e50523b14a7a912fc21587d771a9/artifacts
+end_time: 1732803865674
+entry_point_name: ''
+experiment_id: '850277174293446509'
+lifecycle_stage: active
+run_id: beb4e50523b14a7a912fc21587d771a9
+run_name: Layer_1_BinaryClassification_GBT_Label_7
+run_uuid: beb4e50523b14a7a912fc21587d771a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732803460553
+status: 3
+tags: []
+user_id: ghazijalal
