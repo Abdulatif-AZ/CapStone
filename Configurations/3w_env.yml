@@ -148,4 +148,3 @@ dependencies:
       - seaborn==0.13.2
       - tenacity==9.0.0
       - tslearn==0.6.3
-prefix: /Users/ghazijalal/anaconda3/envs/3w_env
