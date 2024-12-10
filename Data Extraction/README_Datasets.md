@@ -1,7 +1,7 @@
 # To extract the data directly from 3W Repository: 
 
 1. Clone the Repository to your local environment.
-Change the directory to the desired location in your local machine.
+Change the directory to the the same directory where this repository is saved.
 In Terminal: git clone https://github.com/petrobras/3W.git
 In Terminal: cd 3W
 
