@@ -3,6 +3,7 @@
 ## 1. Clone the Repository
 '''
 Clone the repository to your local environment.
+Change the directory to the the same directory where this repository is saved.
 In Terminal: git clone https://github.com/petrobras/3W.git
 In Terminal: cd 3W
 '''
@@ -26,12 +27,18 @@ In Terminal: export PYTHONPATH=$PYTHONPATH:'/path_to/3W/toolkit'
 # Imports & Configurations
 import os
 import pandas as pd
-os.chdir('path_to/3W') # Path to '3W' repository on your local machine
+os.chdir(os.path.join(os.getcwd(), '..', '..'))
+os.chdir('3W')
 import toolkit as tk
 
 real_instances, simulated_instances, drawn_instances = tk.get_all_labels_and_files() # Load Datasets
 
-os.chdir('path_to/CapStone/Data') # Path to 'Data' subforlder in the 'CapStone' git repository on your local machine
+os.chdir(os.path.join(os.getcwd(), '..'))
+os.chdir('CapStone')
+
+# create a new folder 
+if not os.path.exists('Data'):
+    os.makedirs('Data')
 
 real_data = pd.DataFrame()
 for i in range(len(real_instances)): # Combining all the real instances into a single dataframe

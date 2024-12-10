@@ -17,6 +17,8 @@ In Terminal: export PYTHONPATH=$PYTHONPATH:'/path_to/3W/toolkit'
 
 5. Run the python file '3W_Data_Extraction.py' in the terminal or the through the notebook '3W_Data_Extraction.ipynb'
 
+6. At the end of the file run you will have new folder created called Data with 3 csv files.
+
 
 # To download extracted datasets:
 
