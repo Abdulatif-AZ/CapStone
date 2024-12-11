@@ -47,7 +47,7 @@ Multiple modeling attempts were made, including:
   - **[`test_pipeline.py`](./ML/Final%20Solution/test_pipeline.py)**: ************************
 
 ### 7. **Other Directories**
-- **[`logs`](./Ml/logs)**: Contains execution and training logs.
+- **[`logs`](./ML/logs)**: Contains execution and training logs.
 - **[`mlruns`](./ML/mlruns)**: Tracks experiments and model metrics using MLflow.
 - **[`models`](./ML/models)**: Stores saved models for deployment.
 
