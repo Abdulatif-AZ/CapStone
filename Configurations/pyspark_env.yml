@@ -1,4 +1,4 @@
-name: pyspark-env
+name: pyspark_env
 channels:
   - conda-forge
   - defaults
