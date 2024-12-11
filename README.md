@@ -57,7 +57,7 @@ Multiple modeling attempts were made, including:
 ## How to Replicate the Final Solution
 
 1. **Set up the environment**:
-   - Follow the steps detailed in [`configuration_setup.ipynb`](./Configurations/configuration_setup.ipynb) to install dependencies using `3w_env.yml` or `pyspark_env.yml`.
+   - Follow the steps detailed in [`configuration_setup.ipynb`](./Configurations/configuration_setup.ipynb) to install dependencies using [`3w_env.yml`](./Configurations/3w_env.yml) or [`pyspark_env.yml`](./Configurations/pyspark_env.yml).
 
 2. **Extract the Data**:
    - Run [`3W_Data_Extraction.ipynb`](./Data%20Extraction/3W_Data_Extraction.ipynb) to extract the data from 3W.
