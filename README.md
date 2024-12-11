@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project focuses on identifying and classifying undesirable events in offshore wells based on time-series data provided by [Petrobras](https://github.com/petrobras/3W). Using the 3W dataset, which includes real, simulated, and hand-drawn instances, we developed a model that classifies 9 undersirable events in offshore free flowing well.s 
+This project focuses on identifying and classifying undesirable events in offshore wells based on time-series data provided by [Petrobras](https://github.com/petrobras/3W). Using the 3W dataset, which includes real, simulated, and hand-drawn instances, we developed a model that classifies 9 undersirable events in offshore free flowing wells. 
 
 Multiple modeling attempts were made, including:
 
@@ -42,14 +42,14 @@ Multiple modeling attempts were made, including:
   - **[`Model_XGBoost_V1.ipynb`](./ML/Alternative%20Solutions/Model_XGBoost_V1.ipynb)**: XGBoost algorithm to classify the events 0, 1, 5, 7.
 - **Final Solution**:
   - **[`3W_PySpark_MLlib_Stacked_Model.ipynb`](./ML/Final%20Solution/3W_PySpark_MLlib_Stacked_Model.ipynb)**: Stacked ensemble model.
-  - **[`rf_stacked_model_pipeline.py`](./ML/Final%20Solution/rf_stacked_model_pipeline.py)**: Random Forest stacked model pipeline.
-  - **[`rf_stacked_model_streamlit.py`](./ML/Final%20Solution/rf_stacked_model_streamlit.py)**: Streamlit application for the stacked model.
-  - **[`test_pipeline.py`](./ML/Final%20Solution/test_pipeline.py)**: Testing pipeline for model deployment.
+  - **[`rf_stacked_model_pipeline.py`](./ML/Final%20Solution/rf_stacked_model_pipeline.py)**: **********************
+  - **[`rf_stacked_model_streamlit.py`](./ML/Final%20Solution/rf_stacked_model_streamlit.py)**: *********************
+  - **[`test_pipeline.py`](./ML/Final%20Solution/test_pipeline.py)**: ************************
 
 ### 7. **Other Directories**
-- **[`logs`](./logs)**: Contains execution and training logs.
-- **[`mlruns`](./mlruns)**: Tracks experiments and model metrics using MLflow.
-- **[`models`](./models)**: Stores saved models for deployment.
+- **[`logs`](./Ml/logs)**: Contains execution and training logs.
+- **[`mlruns`](./ML/mlruns)**: Tracks experiments and model metrics using MLflow.
+- **[`models`](./ML/models)**: Stores saved models for deployment.
 
 ---
 
