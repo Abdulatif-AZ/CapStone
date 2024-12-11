@@ -16,59 +16,59 @@ Multiple modeling attempts were made, including:
 ## Repository Structure
 
 ### 1. **Cleaning & Preparation**
-- **`Cleaning_Approach_1.ipynb`**: First cleaning method, focusing on filling missing values and defining classes.
-- **`Cleaning_Approach_2.ipynb`**: Alternative comprehensive cleaning approach using PySpark for scalability.
-- **`scaler_model`**: The scaler model used to scale the data.
+- **[`Cleaning_Approach_1.ipynb`](./Cleaning%20&%20Preparation/Cleaning_Approach_1.ipynb)**: First cleaning method, focusing on filling missing values and defining classes.
+- **[`Cleaning_Approach_2.ipynb`](./Cleaning%20&%20Preparation/Cleaning_Approach_2.ipynb)**: Alternative comprehensive cleaning approach using PySpark for scalability.
+- **[`scaler_model`](./Cleaning%20&%20Preparation/scaler_model)**: The scaler model used to scale the data.
 
 ### 2. **Configurations**
-- **`3w_env.yml`** and **`pyspark_env.yml`**: Environment configuration files for Python and PySpark.
-- **`configuration_setup.ipynb`**: Instructions to set up the working environment.
+- **[`3w_env.yml`](./Configurations/3w_env.yml)** and **[`pyspark_env.yml`](./Configurations/pyspark_env.yml)**: Environment configuration files for Python and PySpark.
+- **[`configuration_setup.ipynb`](./Configurations/configuration_setup.ipynb)**: Instructions to set up the working environment.
 
 ### 3. **Data**
-- **`3W Original`**: Will contain the original data once `3W_Data_Extraction.ipynb` is executed.
-- **`Cleaning & Preparation`**: Will contain cleaned datat once the `Cleaning_Approach_1.ipynb` and `Cleaning_Approach_2.ipynb` are executed.
+- **[`3W Original`](./Data/3W%20Original)**: Will contain the original data once `3W_Data_Extraction.ipynb` is executed.
+- **[`Cleaning & Preparation`](./Data/Cleaning%20&%20Preparation)**: Will contain cleaned data once the `Cleaning_Approach_1.ipynb` and `Cleaning_Approach_2.ipynb` are executed.
 
 ### 4. **Data Extraction**
-- **`3W_Data_Extraction.ipynb`**: Extracts and combines the parquet files provided by Petrobras.
+- **[`3W_Data_Extraction.ipynb`](./Data%20Extraction/3W_Data_Extraction.ipynb)**: Extracts and combines the parquet files provided by Petrobras.
 
 ### 5. **EDA (Exploratory Data Analysis)**
-- **`3W_EDA.ipynb`**: Exploratory analysis on the dataset to identify trends and anomalies.
-- **`3W_Real.ipynb`**: Uses pyspark to explore the real instances available in the 3W dataset. 
-- **`Data Overview.ipynb`**: High-level summary of the data.
-- **`Events.ipynb`**: Dives deeper into the undesirable events data.
+- **[`3W_EDA.ipynb`](./EDA/3W_EDA.ipynb)**: Exploratory analysis on the dataset to identify trends and anomalies.
+- **[`3W_Real.ipynb`](./EDA/3W_Real.ipynb)**: Uses PySpark to explore the real instances available in the 3W dataset.
+- **[`Data Overview.ipynb`](./EDA/Data%20Overview.ipynb)**: High-level summary of the data.
+- **[`Events.ipynb`](./EDA/Events.ipynb)**: Dives deeper into the undesirable events data.
 
 ### 6. **ML (Machine Learning)**
 - **Alternative Solutions**:
-  - **`Model_LSTM_RF_LR_V1.ipynb`**: Stacked LSTM with Random Forest, and Logistic Regression for the events 0, 1, 5, 7.
-  - **`Model_XGBoost_V1.ipynb`**: XGBoost algorithm to classify the events 0, 1, 5, 7.
+  - **[`Model_LSTM_RF_LR_V1.ipynb`](./ML/Alternative%20Solutions/Model_LSTM_RF_LR_V1.ipynb)**: Stacked LSTM with Random Forest and Logistic Regression for the events 0, 1, 5, 7.
+  - **[`Model_XGBoost_V1.ipynb`](./ML/Alternative%20Solutions/Model_XGBoost_V1.ipynb)**: XGBoost algorithm to classify the events 0, 1, 5, 7.
 - **Final Solution**:
-  - **`3W_PySpark_MLlib_Stacked_Model.ipynb`**: Stacked ensemble model.
-  - **`rf_stacked_model_pipeline.py`**: ********************************
-  - **`rf_stacked_model_streamlit.py`**: *******************************
-  - **`test_pipeline.py`**: **********************************
+  - **[`3W_PySpark_MLlib_Stacked_Model.ipynb`](./ML/Final%20Solution/3W_PySpark_MLlib_Stacked_Model.ipynb)**: Stacked ensemble model.
+  - **[`rf_stacked_model_pipeline.py`](./ML/Final%20Solution/rf_stacked_model_pipeline.py)**: Random Forest stacked model pipeline.
+  - **[`rf_stacked_model_streamlit.py`](./ML/Final%20Solution/rf_stacked_model_streamlit.py)**: Streamlit application for the stacked model.
+  - **[`test_pipeline.py`](./ML/Final%20Solution/test_pipeline.py)**: Testing pipeline for model deployment.
 
 ### 7. **Other Directories**
-- **`logs`**: Contains execution and training logs.
-- **`mlruns`**: Tracks experiments and model metrics using MLflow.
-- **`models`**: Stores saved models for deployment.
+- **[`logs`](./logs)**: Contains execution and training logs.
+- **[`mlruns`](./mlruns)**: Tracks experiments and model metrics using MLflow.
+- **[`models`](./models)**: Stores saved models for deployment.
 
 ---
 
 ## How to Replicate the Final Solution
 
 1. **Set up the environment**:
-   - Follow the steps detailed in `configuration_setup.ipynb` to install dependencies using `3w_env.yml` or `pyspark_env.yml`.
+   - Follow the steps detailed in [`configuration_setup.ipynb`](./Configurations/configuration_setup.ipynb) to install dependencies using `3w_env.yml` or `pyspark_env.yml`.
 
-2. **Extract the Data**
-    - Run the notebook in `Data Extraction` to extract the data from 3W
+2. **Extract the Data**:
+   - Run [`3W_Data_Extraction.ipynb`](./Data%20Extraction/3W_Data_Extraction.ipynb) to extract the data from 3W.
 
 3. **Data Processing**:
-   - Run the notebook `Cleaning_Approach_2.ipynb` to clean and preprocess the data.
+   - Use [`Cleaning_Approach_2.ipynb`](./Cleaning%20&%20Preparation/Cleaning_Approach_2.ipynb) to clean and preprocess the data.
 
-3. **EDA**:
-   - Use notebooks `3W_EDA.ipynb` and `3W_Real.ipynb` for analysis and understanding of the dataset.
+4. **EDA**:
+   - Use notebooks [`3W_EDA.ipynb`](./EDA/3W_EDA.ipynb) and [`3W_Real.ipynb`](./EDA/3W_Real.ipynb) for analysis and understanding of the dataset.
 
-4. **Model Training**:
-   - Run the notebook initial models in `3W_PySpark_MLlib_Stacked_Model.ipynb` to train the final model under the `Final Solution` folder.
+5. **Model Training**:
+   - Train the final model using [`3W_PySpark_MLlib_Stacked_Model.ipynb`](./ML/Final%20Solution/3W_PySpark_MLlib_Stacked_Model.ipynb) under the `Final Solution` folder.
 
 
