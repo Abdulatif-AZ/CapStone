@@ -2,8 +2,7 @@
 
 ## Introduction
 
-This project focuses on identifying and classifying undesirable events in offshore wells based on time-series data provided by [Petrobras]
-(https://github.com/petrobras/3W). Using the 3W dataset, which includes real, simulated, and hand-drawn instances, we developed a model that classifies 9 undersirable events in offshore free flowing well.s 
+This project focuses on identifying and classifying undesirable events in offshore wells based on time-series data provided by [Petrobras](https://github.com/petrobras/3W). Using the 3W dataset, which includes real, simulated, and hand-drawn instances, we developed a model that classifies 9 undersirable events in offshore free flowing well.s 
 
 Multiple modeling attempts were made, including:
 
