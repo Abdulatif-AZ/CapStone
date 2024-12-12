@@ -46,10 +46,10 @@ def main():
 
                     # Define pipeline configuration
                     pipeline_config = {
-                        "scaler_model_path": "../Cleaning & Preparation/scaler_model",  # Adjust path as needed
-                        "model_dir": "./models",  # Adjust path as needed
+                        "scaler_model_path": "../../Cleaning & Preparation/scaler_model",  # Adjust path as needed
+                        "model_dir": "../models",  # Adjust path as needed
                         "labels_to_process": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-                        "feature_names": [  # Original features
+                        "feature_names": [
                             'ABER-CKGL', 'ABER-CKP', 'ESTADO-DHSV', 'ESTADO-M1', 'ESTADO-PXO',
                             'ESTADO-M2', 'ESTADO-SDV-GL', 'ESTADO-SDV-P', 'ESTADO-W1',
                             'ESTADO-W2', 'P-ANULAR', 'ESTADO-XO', 'P-JUS-CKGL', 'P-MON-CKP',
@@ -79,6 +79,7 @@ def main():
                             'ESTADO-SDV-GL', 'ESTADO-SDV-P', 'ESTADO-W1', 'ESTADO-W2',
                             'ESTADO-XO'
                         ],
+                        "layer_2_feature_names": ["features"] + [f"probability_label_{label}" for label in range(1, 10)],
                         "output_data_path": "./output_pipeline_results.parquet"
                     }
 
@@ -97,7 +98,8 @@ def main():
 
                     # Plot continuous features
                     for feature in pipeline_config["features_continuous"]:
-                        st.line_chart(output_df[["timestamp", feature]].set_index("timestamp"))
+                        if feature in output_df.columns:
+                            st.line_chart(output_df[["timestamp", feature]].set_index("timestamp"))
 
                     # Plot first-layer probabilities
                     for label in pipeline_config["labels_to_process"]:
@@ -106,7 +108,8 @@ def main():
                             st.line_chart(output_df[["timestamp", column_name]].set_index("timestamp"))
 
                     # Plot 'label' and 'class'
-                    st.line_chart(output_df[["timestamp", "label", "class"]].set_index("timestamp"))
+                    if all(col in output_df.columns for col in ["label", "class"]):
+                        st.line_chart(output_df[["timestamp", "label", "class"]].set_index("timestamp"))
 
         except Exception as e:
             st.error(f"Error reading dataset: {e}")

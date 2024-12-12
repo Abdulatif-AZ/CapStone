@@ -159,35 +159,6 @@ class ProductionPipelineRF:
             "row_index", "prediction", "layer_2_probabilities", *[f"probability_label_{label}" for label in self.config["labels_to_process"]]
         )
 
-    def chunked_join(original_data, final_predictions, chunk_size=10000):
-        """
-        Perform a chunked join to manage memory usage.
-        """
-        from pyspark.sql.functions import col
-
-        # Get the distinct range of row indices
-        min_row_index = original_data.agg({"row_index": "min"}).collect()[0][0]
-        max_row_index = original_data.agg({"row_index": "max"}).collect()[0][0]
-
-        final_output = None
-
-        for start in range(min_row_index, max_row_index + 1, chunk_size):
-            end = start + chunk_size
-            logger.info(f"Processing chunk: {start} to {end}")
-
-            # Filter chunk
-            original_chunk = original_data.filter((col("row_index") >= start) & (col("row_index") < end))
-
-            # Perform join for the chunk
-            chunk_result = original_chunk.join(final_predictions, on="row_index", how="inner")
-
-            # Combine results
-            if final_output is None:
-                final_output = chunk_result
-            else:
-                final_output = final_output.union(chunk_result)
-
-        return final_output
 
     def save_results(self, df, output_path):
         """
@@ -202,34 +173,28 @@ class ProductionPipelineRF:
 
 
     def run(self, input_data_path):
+        """
+        Execute the end-to-end pipeline and return the final DataFrame.
+        """
         logger.info("Starting pipeline execution...")
 
-        # Load Data
         original_data = self.load_data(input_data_path)
         logger.info("Data loaded successfully.")
 
-        # Add Missingness Features
         data_with_missingness = self.create_missingness_columns(original_data)
         imputed_data = self.impute_features(data_with_missingness)
         logger.info("Data cleaned successfully.")
 
-        # Scale Features
         scaled_data = self.scale_features(imputed_data)
         logger.info("Features scaled successfully.")
 
-        # Predict Layer 1
         layer_1_predictions = self.predict_layer_1(scaled_data)
         logger.info("Layer 1 predictions generated.")
 
-        # Predict Layer 2
         final_predictions = self.predict_layer_2(layer_1_predictions)
         logger.info("Layer 2 predictions generated.")
 
-        # Chunked join
-        final_output = chunked_join(original_data, final_predictions, chunk_size=10000)
-        logger.info("Join operation completed with chunking.")
-
-        # Save Final Results
+        final_output = original_data.join(final_predictions, on="row_index", how="inner")
         self.save_results(final_output, self.config['output_data_path'])
         logger.info(f"Pipeline execution completed. Results saved to {self.config['output_data_path']}.")
 
