@@ -6,18 +6,21 @@ from pyspark.ml.linalg import DenseVector
 from pyspark.ml.feature import VectorAssembler, StandardScalerModel
 from pyspark.ml.classification import GBTClassificationModel, RandomForestClassificationModel
 import logging
+from pyspark.sql.functions import col
+from pyspark.ml.functions import vector_to_array
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Define the UDF for vector to array conversion
-def vector_to_array_udf(vector):
-    if isinstance(vector, DenseVector):
-        return list(vector)
-    return None
+# UDF to convert VectorUDT to ArrayType
+def vector_to_array(vector):
+    if vector:
+        return vector.toArray().tolist()
+    else:
+        return None
 
-vector_to_array = udf(vector_to_array_udf, ArrayType(DoubleType()))
+vector_to_array_udf = udf(vector_to_array, ArrayType(DoubleType()))
 
 class ProductionPipelineRF:
     def __init__(self, config):
@@ -108,14 +111,11 @@ class ProductionPipelineRF:
                 predictions = predictions.join(pred.select("row_index", f"probability_label_{label}"), on="row_index", how="left").cache()
 
                 logger.info(f"Label {label} processed successfully.")
-
             except Exception as e:
                 logger.error(f"Failed to process label {label}: {e}")
                 raise RuntimeError(f"Error processing label {label}: {e}")
-
+            
         return predictions
-
-
 
     def predict_layer_2(self, df):
         """
@@ -156,44 +156,28 @@ class ProductionPipelineRF:
             raise RuntimeError(f"Prediction failed: {e}")
 
         return predictions.select(
-            "row_index", "prediction", "layer_2_probabilities", *[f"probability_label_{label}" for label in self.config["labels_to_process"]]
+            "row_index", "prediction", "probability", *[f"probability_label_{label}" for label in self.config["labels_to_process"]]
         )
-
-    def chunked_join(original_data, final_predictions, chunk_size=10000):
-        """
-        Perform a chunked join to manage memory usage.
-        """
-        from pyspark.sql.functions import col
-
-        # Get the distinct range of row indices
-        min_row_index = original_data.agg({"row_index": "min"}).collect()[0][0]
-        max_row_index = original_data.agg({"row_index": "max"}).collect()[0][0]
-
-        final_output = None
-
-        for start in range(min_row_index, max_row_index + 1, chunk_size):
-            end = start + chunk_size
-            logger.info(f"Processing chunk: {start} to {end}")
-
-            # Filter chunk
-            original_chunk = original_data.filter((col("row_index") >= start) & (col("row_index") < end))
-
-            # Perform join for the chunk
-            chunk_result = original_chunk.join(final_predictions, on="row_index", how="inner")
-
-            # Combine results
-            if final_output is None:
-                final_output = chunk_result
-            else:
-                final_output = final_output.union(chunk_result)
-
-        return final_output
 
     def save_results(self, df, output_path):
         """
         Save the final DataFrame to Parquet.
         """
         try:
+            # List of columns with VectorUDT
+            vector_columns = [
+                "probability", "probability_label_1", "probability_label_2", 
+                "probability_label_3", "probability_label_4", "probability_label_5", 
+                "probability_label_6", "probability_label_7", "probability_label_8", 
+                "probability_label_9"
+            ]
+
+            # Convert vector columns to arrays
+            for col_name in vector_columns:
+                if col_name in df.columns:  # Check column exists in the DataFrame
+                    df = df.withColumn(col_name, vector_to_array_udf(col_name))
+
+            #df.printSchema()
             df.write.mode("overwrite").parquet(output_path)
             logger.info(f"Results successfully saved to {output_path}.")
         except Exception as e:
@@ -226,8 +210,8 @@ class ProductionPipelineRF:
         logger.info("Layer 2 predictions generated.")
 
         # Chunked join
-        final_output = chunked_join(original_data, final_predictions, chunk_size=10000)
-        logger.info("Join operation completed with chunking.")
+        final_output = original_data.join(final_predictions, on="row_index", how="inner")
+        logger.info("Final output generated.")
 
         # Save Final Results
         self.save_results(final_output, self.config['output_data_path'])
@@ -240,7 +224,7 @@ if __name__ == "__main__":
     import argparse
 
     # Default file paths
-    default_input_path = "../../Data/Cleaning & Preparation/Approach_2/Train Test Data/test_data.parquet"
+    default_input_path = "../../Data/3W Original/instances.parquet"
     default_output_path = "./pipeline_output.parquet"
 
     # Argument parser
