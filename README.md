@@ -1,4 +1,6 @@
-# Capstone Project: Detecting Undesirable Events in Offshore Oil Wells - Group 4
+# Capstone Project: Detecting Undesirable Events in Offshore Oil Wells - Group 4  
+
+Authors:Ghazi Jalal, Rawan Alamer, Adulatif Alzawawi, Ali Tuhaishi, Abdulrahman Alroomi, Sattam Altemyat, Hajar Almussabeh
 
 ## Introduction
 
@@ -42,9 +44,7 @@ Multiple modeling attempts were made, including:
   - **[`Model_XGBoost_V1.ipynb`](./ML/Alternative%20Solutions/Model_XGBoost_V1.ipynb)**: XGBoost algorithm to classify the events 0, 1, 5, 7.
 - **Final Solution**:
   - **[`3W_PySpark_MLlib_Stacked_Model.ipynb`](./ML/Final%20Solution/3W_PySpark_MLlib_Stacked_Model.ipynb)**: Stacked ensemble model.
-  - **[`rf_stacked_model_pipeline.py`](./ML/Final%20Solution/rf_stacked_model_pipeline.py)**: **********************
-  - **[`rf_stacked_model_streamlit.py`](./ML/Final%20Solution/rf_stacked_model_streamlit.py)**: *********************
-  - **[`test_pipeline.py`](./ML/Final%20Solution/test_pipeline.py)**: ************************
+  - **[`rf_stacked_model_pipeline.py`](./ML/Final%20Solution/rf_stacked_model_pipeline.py)**: PySpark pipeline for the stacked ensemble model starting from injestion to results generation.
 
 ### 7. **Other Directories**
 - **[`logs`](./ML/logs)**: Contains execution and training logs.
