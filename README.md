@@ -1,4 +1,4 @@
-# Capstone Project: Offshore Well Event Classification - Group 4
+# Capstone Project: Detecting Undesirable Events in Offshore Oil Wells - Group 4
 
 ## Introduction
 
