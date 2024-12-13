@@ -1,6 +1,11 @@
 # Capstone Project: Detecting Undesirable Events in Offshore Oil Wells - Group 4  
 
-Authors: Ghazi Jalal, Rawan Alamer, Adulatif Alzawawi, Ali Tuhaishi, Abdulrahman Alroomi, Sattam Altemyat, Hajar Almussabeh
+
+### Authors:  
+
+Ghazi Jalal, Rawan Alamer, Adulatif Alzawawi, Ali Tuhaishi, Abdulrahman Alroomi, Sattam Altemyat, Hajar Almussabeh
+
+---
 
 ## Introduction
 
